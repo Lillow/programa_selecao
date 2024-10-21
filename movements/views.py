@@ -4,7 +4,7 @@ from .forms import MovementForm
 
 
 def movement_list(request):
-    movements = Movement.object.all()
+    movements = Movement.objects.all()
     return render(request, "movements/movement_list.html", {"movements": movements})
 
 
