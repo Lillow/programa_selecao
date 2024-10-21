@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Excluir Movimentação</title>
+	</head>
+	<body>
+		<h1>Excluir Movimentação</h1>
+		<p>Você tem certeza que deseja excluir "{{ movement }}"?</p>
+		<form method="post">
+			{% csrf_token %}
+			<button type="submit">Confirmar</button>
+		</form>
+		<a href="{% url 'movement_list' %}">Cancelar</a>
+	</body>
+</html>

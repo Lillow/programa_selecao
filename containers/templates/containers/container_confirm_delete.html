@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Excluir Contêiner</title>
+	</head>
+	<body>
+		<h1>Excluir Contêiner</h1>
+		<p>Você tem certeza que deseja excluir "{{ container }}"?</p>
+		<form method="post">
+			{% csrf_token %}
+			<button type="submit">Confirmar</button>
+		</form>
+		<a href="{% url 'container_list' %}">Cancelar</a>
+	</body>
+</html>
